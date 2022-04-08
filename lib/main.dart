@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
             child: Icon(
               Icons.beenhere,
               color: Colors.yellow[500],
+                size: 50.0
             ),
           )
         ])
