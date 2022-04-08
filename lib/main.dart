@@ -28,6 +28,12 @@ class MyApp extends StatelessWidget {
           ),
           Center(
             child: Text('Bienvenido', style: TextStyle(color: Colors.white, fontSize: 50),),
+          ),
+          Container(
+            child: Icon(
+              Icons.beenhere,
+              color: Colors.yellow[500],
+            ),
           )
         ])
       ),
