@@ -13,58 +13,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'LDSW',
+      title: 'De película',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-             body: Column(
-               mainAxisAlignment: MainAxisAlignment.center,
-               crossAxisAlignment: CrossAxisAlignment.center,
-               children: [
-                 Container(
-                   color: Colors.blueAccent,
-                   padding: EdgeInsets.all(30),
-                   child: Row(
-                     children: [
-                       Text('Actividad 3.4', style: TextStyle(
-                         fontSize: 40,
-                         color: Colors.white
-                       )),
-                     ],
-                   ),
-                 ),
-                 Container(
-                   color: Colors.lightBlue,
-                   padding: EdgeInsets.all(15),
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.center,
-                     children: [
-                       Text('Utilización de widgets', style: TextStyle(
-                           fontSize: 20,
-                           color: Colors.white
-                       )),
-                     ],
-                   ),
-                 ),
-                 Stack(
-                   alignment: Alignment.topCenter,
-                   children: [
-                     Container(
-                       color: Colors.amber,
-                       child: SizedBox(
-                         height: 150,
-                         width: 150,
-                       ),
-                     ),
-                     Container(
-                       color: Colors.blueGrey,
-                       child: SizedBox(
-                         height: 60,
-                         width: 60,
-                       ),
-                     )
-                   ],
-                 )
-               ],
-             ),
+        appBar: AppBar(
+          title: Text('Catálogo dominguero'),
+        ),
+        body: Stack(children:[
+          Container(
+            decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/pop.jpg'),
+                fit: BoxFit.fill,
+            colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5),
+                BlendMode.srcOver) )),
+          ),
+          Center(
+            child: Text('Bienvenido', style: TextStyle(color: Colors.white, fontSize: 50),),
+          )
+        ])
       ),
     );
   }
